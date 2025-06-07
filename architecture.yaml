@@ -1,0 +1,17 @@
+layers:
+  - name: Controller
+    allowedToUse: [Service]
+  - name: Service
+    allowedToUse: [Repository]
+  - name: Repository
+    allowedToUse: []
+
+components:
+  - name: UserController
+    layer: Controller
+  - name: UserService
+    layer: Service
+  - name: UserRepository
+    layer: Repository
+  - name: PaymentService
+    layer: Repository  # wrong
